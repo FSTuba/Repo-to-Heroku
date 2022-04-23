@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="CHM Editor">
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="ExWindow Styles" value="0x200">
+	<param name="Window Styles" value="0x800025">
+	<param name="Font" value="MS Sans Serif,9,0">
+</OBJECT>
+<UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="首頁">
+    <param name="Local" value="page_1.html">
+    <param name="ImageNumber" value="11">
+    </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="SR規則翻譯校對潤色進度表">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_44.html">
+    <param name="ImageNumber" value="11">
+    </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="SR的世界觀－－第六紀的生活">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_38.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="凡事皆有代價">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_8.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="地理志－－狂奔者的舞台">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_9.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="狂奔流程－－你生活中的一天">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_41.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="任務類型－－你可能接到的活兒">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_42.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="對手＆其他組織">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_43.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="工作之餘">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_45.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="俚語詞典">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_111.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="SR系統＆概念">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_22.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="D6檢定＆系統">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_23.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="你的角色＆人物卡上的其他信息">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_25.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="極限">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_24.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="建卡指南">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_20.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="建卡常用表格">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_21.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="建卡步驟">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_47.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="特質">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_46.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="技能">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_26.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="技能列表">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_56.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="使用技能">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_55.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="知識與語言">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_35.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="戰鬥">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_37.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="戰鬥章節全表格">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_78.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="遠程戰鬥">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_83.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="槍械相關">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_109.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="投射/爆炸/炮術">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_90.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="近身戰鬥">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_84.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="特殊行動">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_85.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="防禦＆掩體">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_114.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="載具規則＆戰鬥">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_2.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="治療規則">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_113.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="矩陣">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_39.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="矩陣詞典">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_106.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="黑客須知－－打斷矩陣的脊柱">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_95.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="矩陣行動">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_96.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="主機與IC">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_97.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="超鏈者">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_98.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="共鳴動作＆詞庫">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_103.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="網精">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_107.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="機師">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_60.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="機師詳述">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_93.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="魔法">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_10.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="魔法基礎">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_11.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="巫術">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_12.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="法術列表">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_13.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="儀式列表">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_49.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="咒術">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_15.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="精魂">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_51.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="附魔">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_14.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="修士＆異能">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_16.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="星界＆法力屏障">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_17.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="魔法裝備">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_19.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="試劑須知">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_58.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="法器須知">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_59.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="精魂導師">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_57.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="啟蒙">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_18.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="助力與阻力">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="人脈">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_81.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="毒素、攝入物、BTLs">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_82.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="成癮規則">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_88.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="身份＆聲譽＆生活方式">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_89.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="怪物規則＆範例">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_79.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="怪物能力＆弱點">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_112.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="街頭裝備">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_40.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="裝備列表">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_61.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="近戰＆投射武器">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_62.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="槍械">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_63.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="槍械配件">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_64.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="彈藥＆爆炸物">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_65.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="衣物＆護甲">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_66.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="電子設備">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_67.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="矩陣相關">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_69.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="程序與軟件">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_91.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="視覺/聽覺/傳感設備">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_92.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="綜合裝備">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_100.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="綜合裝備">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_72.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="毒素/攝入物/BTLs購表">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_108.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="化學/生物/醫學相關">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_105.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="殖裝">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_70.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="賽博改造">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_87.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="生體改造">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_110.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="魔法裝備">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_19.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="載具與無人機">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_101.html">
+      <param name="ImageNumber" value="1">
+      </OBJECT>
+    <UL>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="載具">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_71.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+      <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="無人機">
+        <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_102.html">
+        <param name="ImageNumber" value="11">
+        </OBJECT>
+    </UL>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="SR故事集">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_4.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="另一個夜晚，另一場狂奔（Another night, Another run）">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_5.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="戰鬥之後（THE BATTLE FOUGHT）">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_6.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="攜槍的女孩們（GIRLS WITH GUNS）">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_29.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="頂與虹（ROOFTOPS ＆ RAINBOWS）">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_30.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="煙起之處（WHERE THERE』S SMOKE）">
+      <param name="Local" value="SR5ev1.10/page_1.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="副業的危險（THE DANGER OF SIDER JOBS）">
+      <param name="Local" value="SR5ev1.10/page_2.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="一小段陰影中的音樂（A LITTLE SHADOW MUSIC）">
+      <param name="Local" value="SR5ev1.10/page_3.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="全方位（ALL THE ANGLES）">
+      <param name="Local" value="SR5ev1.10/page_4.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="GM指南">
+    <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_86.html">
+    <param name="ImageNumber" value="1">
+    </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="遊戲管理">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_7.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="模組設計">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_27.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="任務獎勵">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_116.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="NPC操作指南">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_115.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="NPC規則">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_3.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="安保佈置－－第六世界安保">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_117.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="隨機狂奔生成器">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_99.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="偶訪地點">
+      <param name="Local" value="SR5ev1.10/SR5ev0.995b/page_28.html">
+      <param name="ImageNumber" value="11">
+      </OBJECT>
+  </UL>
+</UL>
+</BODY></HTML>

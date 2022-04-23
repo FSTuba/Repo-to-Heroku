@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>模組設計</TITLE>
+<META content="text/html; charset=big5" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.9600.18163"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt"><SPAN 
+style='FONT-SIZE: 18pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan; mso-layout-grid-align: none" 
+align=left><SPAN 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: gray; mso-bidi-font-family: 細明體; mso-font-kerning: 0pt'>翻譯：<SPAN 
+lang=EN-US>1</SPAN>；校對：缺；潤色：缺；編排：<SPAN 
+lang=EN-US>2<o:p></o:p></SPAN></SPAN></P></SPAN>
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 18pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'></SPAN></B>&nbsp;</P>
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 18pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>模組</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style='FONT-SIZE: 13.5pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>CAMPAIGNS</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'> 
+<o:p></o:p></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>從角色扮演的角度而言，模組就是一系列互相多少有些聯繫的狂奔，它們甚至可能只是有（大抵）相同的人物參與。不過，將一系列狂奔聯繫起來的最常見方式，就是通過「模組情節」。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>模組情節<SPAN 
+lang=EN-US>CAMPAIGN PLOTS <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>有情節的模組會包含一系列狂奔，而不是單單一個。不過，在很多方面上，纂寫這一故事的方式和為單次狂奔創造情節差不了多少。正如同計劃單次狂奔一樣，模組情節的構建應當由一個「鉤子（<SPAN 
+lang=EN-US>hook</SPAN>）」開始。鉤子應該是情節中最吸引人的部分，它應當令人激動或者是出人意料。在一次模組中，我們總會在計劃，組織，積極性或者別的什麼東西上碰上問題，只有引人入勝的故事才能讓玩家們有動力進行下去。鉤子不一定要太複雜，只需要能一句話概括故事中心大意即可。有些時候鉤子會是整個模組的高潮或者結尾，不過有些時候也不是。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>接下來，<SPAN 
+lang=EN-US>GM</SPAN>應當寫出模組的<B style="mso-bidi-font-weight: normal">結尾（<SPAN 
+lang=EN-US>ending</SPAN>）</B>。和纂寫單次狂奔的劇情一樣，提前寫好結尾能夠確保整個故事在最終對決時有一個令人滿意的高潮環節。這並不意味著<SPAN 
+lang=EN-US>GM</SPAN>必須提前精確預定什麼事情會發生，誰又會最終取勝，但是圍繞著模組情節建立的衝突或者事件至少應該被確定下來。如果不知道模組的大致情節應該如何發展，<SPAN 
+lang=EN-US>GM</SPAN>可能會寫出一個七扭八歪，毫無中心意義的故事，玩家們也就不會感興趣了。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在確定了結尾後，<SPAN 
+lang=EN-US>GM</SPAN>可以試著<B style="mso-bidi-font-weight: normal">倒推（<SPAN 
+lang=EN-US>work 
+backward</SPAN>）</B>，試圖判定結尾的情況（可能）是如何發生的，然後圍繞著這一點開始構築劇情，然後再判定這些劇情如何發生的……以此類推，直到寫回模組開始的時候為止。現在，<SPAN 
+lang=EN-US>GM</SPAN>就有了一系列寫有劇情重點的時間線，以便為模組的故事列出大致發展。每一個劇情重點都很可能是單次狂奔的中心，它們應當是很重要的。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>劇情節奏<SPAN 
+lang=EN-US>PLOT PACING <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>GM</SPAN><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在寫故事和跑團時需要考慮的重點之一就是節奏。正如創造單次狂奔一樣，<SPAN 
+lang=EN-US>GM</SPAN>應該控制對玩家放出劇情信息的快慢。在單次狂奔中這只需要使用一些場景就能完成，但是在模組中，獲得信息可能是整場狂奔的目標。除了這一點之外，其它原理都基本相同。如果整個故事看起來有些拖沓，或者展開速度太慢，<SPAN 
+lang=EN-US>GM</SPAN>可以通過在更短的時間內介紹更多的劇情重點以加快速度，或者是刪減一些中間的重點，並直接放出原本計劃之後展現的重要劇情。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>總體而言，<SPAN 
+lang=EN-US>GM</SPAN>應該決定這一模組的節奏為何。這故事是那種需要被慢慢地揭開的大陰謀嗎？還是那種需要和時間賽跑才能避免大危機的模組呢？<SPAN 
+lang=EN-US>GM</SPAN>在決定模組的節奏時，也確定了模組劇情重點的放出速度。然後，<SPAN 
+lang=EN-US>GM</SPAN>應該為模組的狂奔寫出一條粗略的時間線，以對劇情發展的路線有一個大體的認識。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>除非<SPAN 
+lang=EN-US>GM</SPAN>希望每一次狂奔都是模組劇情的一部分，否則模組任務（<SPAN lang=EN-US>campaign 
+run</SPAN>）應該穿插一些有著自己劇情的「單次短團（<SPAN lang=EN-US>One 
+shot</SPAN>）」，這是在長達幾季的電視劇劇情中常用的手法。<SPAN 
+lang=EN-US>GM</SPAN>可以通過在模組模組任務中穿插一些和劇情無關的狂奔來「隔開」劇情發展，以達到控制模組節奏的目的。如果想更有劇情效果的話，<SPAN 
+lang=EN-US>GM</SPAN>可以隨著劇情逼近終局，而增加模組模組任務出現的頻率。比如說，有位<SPAN 
+lang=EN-US>GM</SPAN>有著需要六次狂奔才能完成的模組劇情，但是整個模組則會包含十次狂奔。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: #0000cc'>
+<TABLE style="WIDTH: 194pt; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=0 width=257 align=center border=0>
+  <COLGROUP>
+  <COL style="WIDTH: 15pt; mso-width-source: userset; mso-width-alt: 640" 
+  width=20>
+  <COL style="WIDTH: 13pt; mso-width-source: userset; mso-width-alt: 544" 
+  width=17>
+  <COL style="WIDTH: 69pt; mso-width-source: userset; mso-width-alt: 2944" 
+  width=92>
+  <COL style="WIDTH: 14pt; mso-width-source: userset; mso-width-alt: 576" 
+  width=18>
+  <COL style="WIDTH: 68pt; mso-width-source: userset; mso-width-alt: 2880" 
+  width=90>
+  <COL style="WIDTH: 15pt; mso-width-source: userset; mso-width-alt: 640" 
+  width=20>
+  <TBODY>
+  <TR style="HEIGHT: 21pt; mso-height-source: userset" height=28>
+    <TD class=xl67 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 21pt; BORDER-RIGHT: #f0f0f0; WIDTH: 194pt; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f2f2f2 1.5pt solid; BACKGROUND-COLOR: #f2f2f2" 
+    height=28 width=257 colSpan=6><STRONG><SPAN 
+      style="mso-spacerun: yes"><FONT color=#000080>&nbsp;</FONT></SPAN><FONT 
+      color=#000080>範例</FONT></STRONG></TD></TR>
+  <TR style="HEIGHT: 18.75pt" height=25>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 18.75pt; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2" 
+    height=25><FONT color=#000000>　</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>1</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>模組任務1</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>5</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>單次短團</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>　</FONT></TD></TR>
+  <TR style="HEIGHT: 16.5pt" height=22>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 16.5pt; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2" 
+    height=22><FONT color=#000000>　</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>2</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>單次短團</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>6</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>模組任務3</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>　</FONT></TD></TR>
+  <TR style="HEIGHT: 16.5pt" height=22>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 16.5pt; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2" 
+    height=22><FONT color=#000000>　</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>3</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>單次短團</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>7</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>模組任務4</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>　</FONT></TD></TR>
+  <TR style="HEIGHT: 16.5pt" height=22>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 16.5pt; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2" 
+    height=22><FONT color=#000000>　</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>4</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>模組任務2</FONT></TD>
+    <TD class=xl70 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=2>8</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>模組任務5</FONT></TD>
+    <TD class=xl69 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000>　</FONT></TD></TR>
+  <TR style="HEIGHT: 8.25pt; mso-height-source: userset" height=11>
+    <TD class=xl71 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 8.25pt; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2" 
+    height=11><FONT color=#000000 size=1>　</FONT></TD>
+    <TD class=xl72 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=1>　</FONT></TD>
+    <TD class=xl71 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=1>　</FONT></TD>
+    <TD class=xl72 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=1>　</FONT></TD>
+    <TD class=xl71 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=1>　</FONT></TD>
+    <TD class=xl71 
+    style="BORDER-TOP: #f0f0f0; BORDER-RIGHT: #f0f0f0; BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; BACKGROUND-COLOR: #f2f2f2"><FONT 
+      color=#000000 size=1>　</FONT></TD></TR></TBODY></TABLE></SPAN><SPAN lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p></o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>計劃結尾<SPAN 
+lang=EN-US> PLAN TO FINISH <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>GM</SPAN><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>所犯的錯誤中，最常見的一個就是抱有過度雄心。<SPAN 
+lang=EN-US>GM</SPAN>可能會想講出一個長達二十，三十甚至更多次冒險的宏大故事。這聽起來當然很宏大很刺激，但是最終（很可能）發生的事則是模組被人鴿掉。能夠跑完的簡單劇情總好過永遠跑不完的宏大劇情。要瞭解玩家們的積極性，<SPAN 
+lang=EN-US>GM</SPAN>應該根據他們的積極性來做計劃。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>數據管理<SPAN 
+lang=EN-US> DATA MANAGEMENT <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在準備模組時，<SPAN 
+lang=EN-US>GM</SPAN>應當對如何追蹤相關的數據準備相關戰略。為了能令模組更有衝擊性，隨著劇情發展，遊戲世界裡的連續性也很重要。這意味著<SPAN 
+lang=EN-US>GM</SPAN>應該記住自己介紹的角色和地點，發生的狀況，以及其它各種東西。這種數據管理可以在紙面上記下來，用電子文檔，用論壇，用專用程序，或者別的管用的東西都行。重點在於<SPAN 
+lang=EN-US>GM</SPAN>要有做記錄，跟蹤和追蹤狂奔中各項事情的計劃。如果單純依賴記憶，錯誤和自相矛盾的地方就時不時會出現，也會影響到遊戲的趣味和氣氛。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; TEXT-ALIGN: left; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>模組與角色升級 
+<SPAN lang=EN-US>CAMPAIGN TIME AND CHARACTER ADVANCEMENT 
+<o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 24.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 2.01"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>另一個<SPAN 
+lang=EN-US>GM</SPAN>需要考慮的要素在於遊戲內部的模組時間進程。這會影響角色升級的時間。小組成員多久狂奔一次？每月一次？每月兩次？六週一次？還是其它？<SPAN 
+lang=EN-US>GM</SPAN>應該考慮到玩家們大小技能升級和購置大小裝備的頻率。比如說，有位<SPAN 
+lang=EN-US>GM</SPAN>覺得玩家們每次狂奔都應該能夠購置一點小裝備或者提升一些小技能，每三次狂奔就能提升一些大技能或者購置一些大裝備。這一升級的快慢，在同平均的狂奔報酬相結合後（見【任務獎勵】），會設定模組時間線內狂奔的頻率。如果狂奔需要因為故事原因而以其它速度進行，<SPAN 
+lang=EN-US>GM</SPAN>可以調整每次狂奔給予的基礎報酬，以維持已經預定好的角色升級速度。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"; COLOR: maroon'>其它模組<SPAN 
+lang=EN-US> ALTERNATE CAMPAIGNS <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>暗影狂奔模組的默認設定是所有角色均為狂奔者，第六世界的自由犯罪者。儘管這一設定能夠為各種故事提供大量的可能性，這並不是能夠玩暗影狂奔的唯一方法。下面給出了一系列一些其它玩法的建議，令故事能以其它方式展開。這無法列出所有不同模組的所有不同玩法，只不過是能夠幫助人們想像的一系列點子而已。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>街頭混混<SPAN lang=EN-US> 
+STREET SCUM<o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><I 
+style="mso-bidi-font-style: normal"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>並不是所有人都有成為華麗麗的狂奔者的機會，那些人有著神秘的魔法，鍍了鉻的殖裝，或者是矩陣天才，而有些人則連每天吃上飯找到庇護所都有困難，晚上還可能被人打一頓。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></I></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在街頭混混模組內，玩家們是試圖在第六世界那毫不留情的街頭生存的人們。這一模組提供了專注於暗影狂奔更細微之處，有時間認識細節的好機會。街頭混混模組內的角色很可能不會走出他們生活的城區，甚至可能連街區都不會出一次。地區和角色的細節可以發展出大量的細節，玩家們也會發現自己比起在其它模組中更依戀於這種環境。在這一模組內的故事將集中於角色和他們周圍的人如何在一個幾乎忘記了他們存在的世界中盡力生存，維持生計的經歷。挑戰可以來自諸如幫派和其它權利組織互相搶奪控制權之類的內部來源，也可以來自外部，比如說大型犯罪團伙或者公司試圖進入此處，並徵得某些東西的控制。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>資源和裝備在此類模組中將非常稀缺，玩家們將是第六世界裡未接受過系統教育，也沒享受過什麼福利的一份子。在創建角色時，<SPAN 
+lang=EN-US>GM</SPAN>應該減少角色可獲得的屬性點，技能點和資源——角色們並不會在創立角色時把每個優先級選擇一次，而是要選擇<SPAN 
+lang=EN-US>B</SPAN>級兩次，<SPAN lang=EN-US>C</SPAN>級一次，<SPAN 
+lang=EN-US>D</SPAN>級一次和<SPAN lang=EN-US>E</SPAN>級兩次；或者<SPAN 
+lang=EN-US>C</SPAN>級和<SPAN lang=EN-US>D</SPAN>級各兩次，<SPAN 
+lang=EN-US>E</SPAN>級一次。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>豪華生活<SPAN 
+lang=EN-US>HIGH LIFE <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><I 
+style="mso-bidi-font-style: normal"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>這是每個狂奔者夢寐以求的生活：豪華住房，最好的裝備，新元如同流水一般流進自己腰包。總得有人作為權勢之人對這個社會發號施令，那人就是你！<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></I></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在豪華生活模組裡，狂奔者們已經非常成功了。他們有著豐富的資源，和足以匹敵的技能。他們只有在付了最高的價碼後才會為人服務，即便如此，他們依然是供不應求。這種模組把暗影狂奔世界裡的所有的東西都調到了頂級。這是上層精英的豪華生活，別的人只有道聽途說的份兒。他們會有私人飛機，真的食品，定制的陪護服務。這個級別的模組允許<SPAN 
+lang=EN-US>GM</SPAN>在講述故事時包含那些在常規情況下不大可能出現的角色或者劇情。玩家們會和第六世界裡的大人物見面：企業執行總裁，巨龍，或是世界首腦。他們被僱傭來執行的狂奔可能會包含龐大的計劃，在異國他鄉發生，而狂奔的結果也會造成巨大的影響。玩家們可以參與的東西幾乎包含所有可能性。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在創建要參與此類模組的角色時，默認角色創建部分裡提供的屬性點，技能點和資源都應該被大大增加。當使用優先級表格時，玩家應該選擇<SPAN 
+lang=EN-US>A</SPAN>級兩次，<SPAN lang=EN-US>B</SPAN>級一次，<SPAN 
+lang=EN-US>C</SPAN>級兩次。對於玩家們可獲得的裝備沒有可獲得性限制，是時候放開手腳，玩玩所有玩具了。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>軍方與僱傭兵<SPAN 
+lang=EN-US> MILITARY OR MERCENARY <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><I 
+style="mso-bidi-font-style: normal"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>躲躲藏藏和遮遮掩掩是城裡人做事的手法，但是在城外面，就輪到重武器上場了。如果除了使用大量的重火力之外沒什麼能解決問題，我們就是你應該找的人。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></I></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>軍方與僱傭兵模組完全圍繞著在第六世界的衝突熱點裡的工作展開。角色們可能是為政府，企業或者國家的軍隊工作，或者作為僱傭兵團體自由工作。一個軍方模組對於那些希望在戰鬥劇情上做大做好的玩家們是絕佳的選擇。這是一個重武器，重裝甲和高爆炸藥猶如日常的背景設定。不過這可不意味著它不能被講成一個有力又引人入勝的故事：玩家們可能是一次攻勢的一部分，可能盡力在駐紮後採取守勢，也可能是某個自由鬥士組織的一部分，在敵後以「打帶跑」的游擊戰方式行動。玩家們也有可能是某個特種部隊或者黑色行動組的一部分，對重要敵軍目標實行打擊。軍方模組是講述一個衝突故事的好選擇，也能讓玩家們使用能用的所有武器。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>為軍方模組創立角色時的屬性點和技能點應與默認規則大抵相同。資源則應該被大大增加（三倍或者更多），對於軍方裝備的可獲得性限制也應被忽略。<SPAN 
+lang=EN-US>GM</SPAN>也可以忽略整個購置裝備的過程，然後選出一系列裝備，令玩家用它們達成自己的任務。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>醫療馬車<SPAN lang=EN-US> 
+DOCWAGON <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><I 
+style="mso-bidi-font-style: normal"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>當事情不能再糟，您需要有人幫忙的時候，我們會來的。我們將如同您的守護天使一般保護您，在您需要我們的時候立即出現。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></I></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>醫療馬車（或者其它緊急服務）模組圍繞著拯救而非終結人們的生命展開。玩家們扮演緊急高危快反小組成員，將受傷的客戶撤出危險狀況。這可能會大大改變許多暗影狂奔玩家的遊戲中心，也能提供嶄新的角色扮演機會。玩家角色們會需要回應緊急呼叫，有時甚至需要在他們以前扮演過的那類角色面前保衛自己。立法／公務問題，以及對法律的服從可能會帶來各種麻煩，而就連醫療馬車的僱員也需要保護公司財產和淨利潤。醫療馬車模組能夠允許<SPAN 
+lang=EN-US>GM</SPAN>以全新而有趣的角度講述暗影狂奔世界裡的故事。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>醫療馬車模組裡的角色創建應該與常規相近，資源應該從一系列有限制的清單中選出，<SPAN 
+lang=EN-US>GM</SPAN>決定哪些可供選擇，或者乾脆是根據玩家的角色分發裝備。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div; mso-border-bottom-alt: solid windowtext .5pt">
+<P class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; LAYOUT-GRID-MODE: char; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 0cm 0cm 0pt; PADDING-RIGHT: 0cm; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-SIZE: 14pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>犯罪團伙<SPAN 
+lang=EN-US>CRIMINAL SYNDICATES <o:p></o:p></SPAN></SPAN></B></P></DIV>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd"><I 
+style="mso-bidi-font-style: normal"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在這個世界裡，人們要麼在頂端，要麼在底端，要麼是獵手，要麼是獵物。你不在乎錢是怎麼付的，只要你能拿到自己的一份就夠了。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></I></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>在犯罪團伙模組裡，玩家們為一第六世界裡的大型犯罪團伙工作：黑手黨，極道，律賊，寇沙利，或者其它。這是為希望探索第六世界陰暗面的玩家們而準備的模組。要賺錢，要保護組織，不惜一切代價。最煩的世界充滿了暴力而無情的人們，為了一己私利能夠背叛或者利用任何人。儘管氣氛晦暗，犯罪團伙模組也同樣有機會講出許多有趣的新故事。罪犯團伙經常被捲入衝突：與執法部門，與其它犯罪團伙，或者是內部互鬥。玩家們需要小心行事，為組織效力，在複雜的罪犯政治世界裡闖出一片天。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal 
+style="LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 7.8pt; TEXT-INDENT: 18.1pt; mso-layout-grid-align: none; mso-para-margin-bottom: .5gd; mso-char-indent-count: 1.51"><SPAN 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微軟雅黑","sans-serif"'>犯罪團伙模組裡的角色創建應當不做太多改動。玩家們選擇的技能可能要根據遊戲的背景改變，但是技能點數應當相同。<SPAN 
+lang=EN-US>GM</SPAN>可能會想要限制裝備的可獲得性，不過大多數職業犯罪團伙成員都有著專業狂奔者所有的裝備。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P></BODY></HTML>

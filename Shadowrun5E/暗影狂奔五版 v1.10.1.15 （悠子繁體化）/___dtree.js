@@ -1,671 +1,623 @@
 // Node object
 
-function Node(id, pid, name, url, title, target, icon, iconOpen, open) {
+function TreeNode(id, pid, name, url, title, target, icon, iconOpen, open) {
+    this.id = id;
 
-	this.id = id;
+    this.pid = pid;
 
-	this.pid = pid;
+    this.name = name;
 
-	this.name = name;
+    this.url = url;
 
-	this.url = url;
+    this.title = title;
 
-	this.title = title;
+    this.target = target;
 
-	this.target = target;
+    this.icon = icon;
 
-	this.icon = icon;
+    this.iconOpen = iconOpen;
 
-	this.iconOpen = iconOpen;
+    this._io = open || false;
 
-	this._io = open || false;
+    this._is = false;
 
-	this._is = false;
+    this._ls = false;
 
-	this._ls = false;
+    this._hc = false;
 
-	this._hc = false;
+    this._ai = 0;
 
-	this._ai = 0;
-
-	this._p;
-
-};
-
-
+    this._p;
+}
 
 // Tree object
 
 function dTree(objName) {
+    this.config = {
+        target: null,
 
-	this.config = {
+        folderLinks: true,
 
-		target					: null,
+        useSelection: true,
 
-		folderLinks			: true,
+        useCookies: true,
 
-		useSelection		: true,
+        useLines: true,
 
-		useCookies			: true,
+        useIcons: true,
 
-		useLines				: true,
+        useStatusText: false,
 
-		useIcons				: true,
+        closeSameLevel: false,
 
-		useStatusText		: false,
+        inOrder: false,
+    };
 
-		closeSameLevel	: false,
+    this.icon = {
+        root: "img/base.gif",
 
-		inOrder					: false
+        folder: "img/folder.gif",
 
-	}
+        folderOpen: "img/folderopen.gif",
 
-	this.icon = {
+        node: "img/page.gif",
 
-		root				: 'img/base.gif',
+        empty: "img/empty.gif",
 
-		folder			: 'img/folder.gif',
+        line: "img/line.gif",
 
-		folderOpen	: 'img/folderopen.gif',
+        join: "img/join.gif",
 
-		node				: 'img/page.gif',
+        joinBottom: "img/joinbottom.gif",
 
-		empty				: 'img/empty.gif',
+        plus: "img/plus.gif",
 
-		line				: 'img/line.gif',
+        plusBottom: "img/plusbottom.gif",
 
-		join				: 'img/join.gif',
+        minus: "img/minus.gif",
 
-		joinBottom	: 'img/joinbottom.gif',
+        minusBottom: "img/minusbottom.gif",
 
-		plus				: 'img/plus.gif',
+        nlPlus: "img/nolines_plus.gif",
 
-		plusBottom	: 'img/plusbottom.gif',
+        nlMinus: "img/nolines_minus.gif",
+    };
 
-		minus				: 'img/minus.gif',
+    this.obj = objName;
 
-		minusBottom	: 'img/minusbottom.gif',
+    this.aNodes = [];
 
-		nlPlus			: 'img/nolines_plus.gif',
+    this.aIndent = [];
 
-		nlMinus			: 'img/nolines_minus.gif'
+    this.root = new TreeNode(-1);
 
-	};
+    this.selectedNode = null;
 
-	this.obj = objName;
+    this.selectedFound = false;
 
-	this.aNodes = [];
-
-	this.aIndent = [];
-
-	this.root = new Node(-1);
-
-	this.selectedNode = null;
-
-	this.selectedFound = false;
-
-	this.completed = false;
-
-};
-
-
+    this.completed = false;
+}
 
 // Adds a new node to the node array
 
-dTree.prototype.add = function(id, pid, name, url, title, target, icon, iconOpen, open) {
-
-	this.aNodes[this.aNodes.length] = new Node(id, pid, name, url, title, target, icon, iconOpen, open);
-
+dTree.prototype.add = function (
+    id,
+    pid,
+    name,
+    url,
+    title,
+    target,
+    icon,
+    iconOpen,
+    open
+) {
+    this.aNodes[this.aNodes.length] = new TreeNode(
+        id,
+        pid,
+        name,
+        url,
+        title,
+        target,
+        icon,
+        iconOpen,
+        open
+    );
 };
-
-
 
 // Open/close all nodes
 
-dTree.prototype.openAll = function() {
-
-	this.oAll(true);
-
+dTree.prototype.openAll = function () {
+    this.oAll(true);
 };
 
-dTree.prototype.closeAll = function() {
-
-	this.oAll(false);
-
+dTree.prototype.closeAll = function () {
+    this.oAll(false);
 };
-
-
 
 // Outputs the tree to the page
 
-dTree.prototype.toString = function() {
+dTree.prototype.toString = function () {
+    var str = '<div class="dtree">\n';
 
-	var str = '<div class="dtree">\n';
+    if (document.getElementById) {
+        if (this.config.useCookies) this.selectedNode = this.getSelected();
 
-	if (document.getElementById) {
+        str += this.addNode(this.root);
+    } else str += "Browser not supported.";
 
-		if (this.config.useCookies) this.selectedNode = this.getSelected();
+    str += "</div>";
 
-		str += this.addNode(this.root);
+    if (!this.selectedFound) this.selectedNode = null;
 
-	} else str += 'Browser not supported.';
+    this.completed = true;
 
-	str += '</div>';
-
-	if (!this.selectedFound) this.selectedNode = null;
-
-	this.completed = true;
-
-	return str;
-
+    return str;
 };
-
-
 
 // Creates the tree structure
 
-dTree.prototype.addNode = function(pNode) {
+dTree.prototype.addNode = function (pNode) {
+    var str = "";
 
-	var str = '';
+    var n = 0;
 
-	var n=0;
+    if (this.config.inOrder) n = pNode._ai;
 
-	if (this.config.inOrder) n = pNode._ai;
+    for (n; n < this.aNodes.length; n++) {
+        if (this.aNodes[n].pid == pNode.id) {
+            var cn = this.aNodes[n];
 
-	for (n; n<this.aNodes.length; n++) {
+            cn._p = pNode;
 
-		if (this.aNodes[n].pid == pNode.id) {
+            cn._ai = n;
 
-			var cn = this.aNodes[n];
+            this.setCS(cn);
 
-			cn._p = pNode;
+            if (!cn.target && this.config.target)
+                cn.target = this.config.target;
 
-			cn._ai = n;
+            if (cn._hc && !cn._io && this.config.useCookies)
+                cn._io = this.isOpen(cn.id);
 
-			this.setCS(cn);
+            if (!this.config.folderLinks && cn._hc) cn.url = null;
 
-			if (!cn.target && this.config.target) cn.target = this.config.target;
+            if (
+                this.config.useSelection &&
+                cn.id == this.selectedNode &&
+                !this.selectedFound
+            ) {
+                cn._is = true;
 
-			if (cn._hc && !cn._io && this.config.useCookies) cn._io = this.isOpen(cn.id);
+                this.selectedNode = n;
 
-			if (!this.config.folderLinks && cn._hc) cn.url = null;
+                this.selectedFound = true;
+            }
 
-			if (this.config.useSelection && cn.id == this.selectedNode && !this.selectedFound) {
+            str += this.node(cn, n);
 
-					cn._is = true;
+            if (cn._ls) break;
+        }
+    }
 
-					this.selectedNode = n;
-
-					this.selectedFound = true;
-
-			}
-
-			str += this.node(cn, n);
-
-			if (cn._ls) break;
-
-		}
-
-	}
-
-	return str;
-
+    return str;
 };
-
-
 
 // Creates the node icon, url and text
 
-dTree.prototype.node = function(node, nodeId) {
+dTree.prototype.node = function (node, nodeId) {
+    var str = '<div class="dTreeNode">' + this.indent(node, nodeId);
 
-	var str = '<div class="dTreeNode">' + this.indent(node, nodeId);
+    if (this.config.useIcons) {
+        if (!node.icon)
+            node.icon =
+                this.root.id == node.pid
+                    ? this.icon.root
+                    : node._hc
+                    ? this.icon.folder
+                    : this.icon.node;
 
-	if (this.config.useIcons) {
+        if (!node.iconOpen)
+            node.iconOpen = node._hc ? this.icon.folderOpen : this.icon.node;
 
-		if (!node.icon) node.icon = (this.root.id == node.pid) ? this.icon.root : ((node._hc) ? this.icon.folder : this.icon.node);
+        if (this.root.id == node.pid) {
+            node.icon = this.icon.root;
 
-		if (!node.iconOpen) node.iconOpen = (node._hc) ? this.icon.folderOpen : this.icon.node;
+            node.iconOpen = this.icon.root;
+        }
 
-		if (this.root.id == node.pid) {
+        str +=
+            '<img id="i' +
+            this.obj +
+            nodeId +
+            '" src="' +
+            (node._io ? node.iconOpen : node.icon) +
+            '" alt="" />';
+    }
 
-			node.icon = this.icon.root;
+    if (node.url) {
+        str +=
+            '<a id="s' +
+            this.obj +
+            nodeId +
+            '" class="' +
+            (this.config.useSelection
+                ? node._is
+                    ? "nodeSel"
+                    : "node"
+                : "node") +
+            '" target="body" href="' +
+            node.url +
+            '"';
 
-			node.iconOpen = this.icon.root;
+        if (node.title) str += ' title="' + node.title + '"';
 
-		}
+        if (node.target) str += ' target="' + node.target + '"';
 
-		str += '<img id="i' + this.obj + nodeId + '" src="' + ((node._io) ? node.iconOpen : node.icon) + '" alt="" />';
+        if (this.config.useStatusText)
+            str +=
+                " onmouseover=\"window.status='" +
+                node.name +
+                "';return true;\" onmouseout=\"window.status='';return true;\" ";
 
-	}
+        if (
+            this.config.useSelection &&
+            ((node._hc && this.config.folderLinks) || !node._hc)
+        )
+            str += ' onclick="javascript: ' + this.obj + ".s(" + nodeId + ');"';
 
-	if (node.url) {
+        str += ">";
+    } else if (
+        (!this.config.folderLinks || !node.url) &&
+        node._hc &&
+        node.pid != this.root.id
+    )
+        str +=
+            '<a href="javascript: ' +
+            this.obj +
+            ".o(" +
+            nodeId +
+            ');" class="node">';
 
-		str += '<a id="s' + this.obj + nodeId + '" class="' + ((this.config.useSelection) ? ((node._is ? 'nodeSel' : 'node')) : 'node') + '" target="body" href="' + node.url + '"';
+    str += node.name;
 
-		if (node.title) str += ' title="' + node.title + '"';
+    if (node.url || ((!this.config.folderLinks || !node.url) && node._hc))
+        str += "</a>";
 
-		if (node.target) str += ' target="' + node.target + '"';
+    str += "</div>";
 
-		if (this.config.useStatusText) str += ' onmouseover="window.status=\'' + node.name + '\';return true;" onmouseout="window.status=\'\';return true;" ';
+    if (node._hc) {
+        str +=
+            '<div id="d' +
+            this.obj +
+            nodeId +
+            '" class="clip" style="display:' +
+            (this.root.id == node.pid || node._io ? "block" : "none") +
+            ';">';
 
-		if (this.config.useSelection && ((node._hc && this.config.folderLinks) || !node._hc))
+        str += this.addNode(node);
 
-			str += ' onclick="javascript: ' + this.obj + '.s(' + nodeId + ');"';
+        str += "</div>";
+    }
 
-		str += '>';
+    this.aIndent.pop();
 
-	}
-
-	else if ((!this.config.folderLinks || !node.url) && node._hc && node.pid != this.root.id)
-
-		str += '<a href="javascript: ' + this.obj + '.o(' + nodeId + ');" class="node">';
-
-	str += node.name;
-
-	if (node.url || ((!this.config.folderLinks || !node.url) && node._hc)) str += '</a>';
-
-	str += '</div>';
-
-	if (node._hc) {
-
-		str += '<div id="d' + this.obj + nodeId + '" class="clip" style="display:' + ((this.root.id == node.pid || node._io) ? 'block' : 'none') + ';">';
-
-		str += this.addNode(node);
-
-		str += '</div>';
-
-	}
-
-	this.aIndent.pop();
-
-	return str;
-
+    return str;
 };
-
-
 
 // Adds the empty and line icons
 
-dTree.prototype.indent = function(node, nodeId) {
+dTree.prototype.indent = function (node, nodeId) {
+    var str = "";
 
-	var str = '';
+    if (this.root.id != node.pid) {
+        for (var n = 0; n < this.aIndent.length; n++)
+            str +=
+                '<img src="' +
+                (this.aIndent[n] == 1 && this.config.useLines
+                    ? this.icon.line
+                    : this.icon.empty) +
+                '" alt="" />';
 
-	if (this.root.id != node.pid) {
+        node._ls ? this.aIndent.push(0) : this.aIndent.push(1);
 
-		for (var n=0; n<this.aIndent.length; n++)
+        if (node._hc) {
+            str +=
+                '<a href="javascript: ' +
+                this.obj +
+                ".o(" +
+                nodeId +
+                ');"><img id="j' +
+                this.obj +
+                nodeId +
+                '" src="';
 
-			str += '<img src="' + ( (this.aIndent[n] == 1 && this.config.useLines) ? this.icon.line : this.icon.empty ) + '" alt="" />';
+            if (!this.config.useLines)
+                str += node._io ? this.icon.nlMinus : this.icon.nlPlus;
+            else
+                str += node._io
+                    ? node._ls && this.config.useLines
+                        ? this.icon.minusBottom
+                        : this.icon.minus
+                    : node._ls && this.config.useLines
+                    ? this.icon.plusBottom
+                    : this.icon.plus;
 
-		(node._ls) ? this.aIndent.push(0) : this.aIndent.push(1);
+            str += '" alt="" /></a>';
+        } else
+            str +=
+                '<img src="' +
+                (this.config.useLines
+                    ? node._ls
+                        ? this.icon.joinBottom
+                        : this.icon.join
+                    : this.icon.empty) +
+                '" alt="" />';
+    }
 
-		if (node._hc) {
-
-			str += '<a href="javascript: ' + this.obj + '.o(' + nodeId + ');"><img id="j' + this.obj + nodeId + '" src="';
-
-			if (!this.config.useLines) str += (node._io) ? this.icon.nlMinus : this.icon.nlPlus;
-
-			else str += ( (node._io) ? ((node._ls && this.config.useLines) ? this.icon.minusBottom : this.icon.minus) : ((node._ls && this.config.useLines) ? this.icon.plusBottom : this.icon.plus ) );
-
-			str += '" alt="" /></a>';
-
-		} else str += '<img src="' + ( (this.config.useLines) ? ((node._ls) ? this.icon.joinBottom : this.icon.join ) : this.icon.empty) + '" alt="" />';
-
-	}
-
-	return str;
-
+    return str;
 };
-
-
 
 // Checks if a node has any children and if it is the last sibling
 
-dTree.prototype.setCS = function(node) {
+dTree.prototype.setCS = function (node) {
+    var lastId;
 
-	var lastId;
+    for (var n = 0; n < this.aNodes.length; n++) {
+        if (this.aNodes[n].pid == node.id) node._hc = true;
 
-	for (var n=0; n<this.aNodes.length; n++) {
+        if (this.aNodes[n].pid == node.pid) lastId = this.aNodes[n].id;
+    }
 
-		if (this.aNodes[n].pid == node.id) node._hc = true;
-
-		if (this.aNodes[n].pid == node.pid) lastId = this.aNodes[n].id;
-
-	}
-
-	if (lastId==node.id) node._ls = true;
-
+    if (lastId == node.id) node._ls = true;
 };
-
-
 
 // Returns the selected node
 
-dTree.prototype.getSelected = function() {
+dTree.prototype.getSelected = function () {
+    var sn = this.getCookie("cs" + this.obj);
 
-	var sn = this.getCookie('cs' + this.obj);
-
-	return (sn) ? sn : null;
-
+    return sn ? sn : null;
 };
-
-
 
 // Highlights the selected node
 
-dTree.prototype.s = function(id) {
+dTree.prototype.s = function (id) {
+    if (!this.config.useSelection) return;
 
-	if (!this.config.useSelection) return;
+    var cn = this.aNodes[id];
 
-	var cn = this.aNodes[id];
+    if (cn._hc && !this.config.folderLinks) return;
 
-	if (cn._hc && !this.config.folderLinks) return;
+    if (this.selectedNode != id) {
+        if (this.selectedNode || this.selectedNode == 0) {
+            eOld = document.getElementById("s" + this.obj + this.selectedNode);
 
-	if (this.selectedNode != id) {
+            eOld.className = "node";
+        }
 
-		if (this.selectedNode || this.selectedNode==0) {
+        eNew = document.getElementById("s" + this.obj + id);
 
-			eOld = document.getElementById("s" + this.obj + this.selectedNode);
+        eNew.className = "nodeSel";
 
-			eOld.className = "node";
+        this.selectedNode = id;
 
-		}
-
-		eNew = document.getElementById("s" + this.obj + id);
-
-		eNew.className = "nodeSel";
-
-		this.selectedNode = id;
-
-		if (this.config.useCookies) this.setCookie('cs' + this.obj, cn.id);
-
-	}
-
+        if (this.config.useCookies) this.setCookie("cs" + this.obj, cn.id);
+    }
 };
-
-
 
 // Toggle Open or close
 
-dTree.prototype.o = function(id) {
+dTree.prototype.o = function (id) {
+    var cn = this.aNodes[id];
 
-	var cn = this.aNodes[id];
+    this.nodeStatus(!cn._io, id, cn._ls);
 
-	this.nodeStatus(!cn._io, id, cn._ls);
+    cn._io = !cn._io;
 
-	cn._io = !cn._io;
+    if (this.config.closeSameLevel) this.closeLevel(cn);
 
-	if (this.config.closeSameLevel) this.closeLevel(cn);
-
-	if (this.config.useCookies) this.updateCookie();
-
+    if (this.config.useCookies) this.updateCookie();
 };
-
-
 
 // Open or close all nodes
 
-dTree.prototype.oAll = function(status) {
+dTree.prototype.oAll = function (status) {
+    for (var n = 0; n < this.aNodes.length; n++) {
+        if (this.aNodes[n]._hc && this.aNodes[n].pid != this.root.id) {
+            this.nodeStatus(status, n, this.aNodes[n]._ls);
 
-	for (var n=0; n<this.aNodes.length; n++) {
+            this.aNodes[n]._io = status;
+        }
+    }
 
-		if (this.aNodes[n]._hc && this.aNodes[n].pid != this.root.id) {
-
-			this.nodeStatus(status, n, this.aNodes[n]._ls)
-
-			this.aNodes[n]._io = status;
-
-		}
-
-	}
-
-	if (this.config.useCookies) this.updateCookie();
-
+    if (this.config.useCookies) this.updateCookie();
 };
-
-
 
 // Opens the tree to a specific node
 
-dTree.prototype.openTo = function(nId, bSelect, bFirst) {
+dTree.prototype.openTo = function (nId, bSelect, bFirst) {
+    if (!bFirst) {
+        for (var n = 0; n < this.aNodes.length; n++) {
+            if (this.aNodes[n].id == nId) {
+                nId = n;
 
-	if (!bFirst) {
+                break;
+            }
+        }
+    }
 
-		for (var n=0; n<this.aNodes.length; n++) {
+    var cn = this.aNodes[nId];
 
-			if (this.aNodes[n].id == nId) {
+    if (cn.pid == this.root.id || !cn._p) return;
 
-				nId=n;
+    cn._io = true;
 
-				break;
+    cn._is = bSelect;
 
-			}
+    if (this.completed && cn._hc) this.nodeStatus(true, cn._ai, cn._ls);
 
-		}
+    if (this.completed && bSelect) this.s(cn._ai);
+    else if (bSelect) this._sn = cn._ai;
 
-	}
-
-	var cn=this.aNodes[nId];
-
-	if (cn.pid==this.root.id || !cn._p) return;
-
-	cn._io = true;
-
-	cn._is = bSelect;
-
-	if (this.completed && cn._hc) this.nodeStatus(true, cn._ai, cn._ls);
-
-	if (this.completed && bSelect) this.s(cn._ai);
-
-	else if (bSelect) this._sn=cn._ai;
-
-	this.openTo(cn._p._ai, false, true);
-
+    this.openTo(cn._p._ai, false, true);
 };
-
-
 
 // Closes all nodes on the same level as certain node
 
-dTree.prototype.closeLevel = function(node) {
+dTree.prototype.closeLevel = function (node) {
+    for (var n = 0; n < this.aNodes.length; n++) {
+        if (
+            this.aNodes[n].pid == node.pid &&
+            this.aNodes[n].id != node.id &&
+            this.aNodes[n]._hc
+        ) {
+            this.nodeStatus(false, n, this.aNodes[n]._ls);
 
-	for (var n=0; n<this.aNodes.length; n++) {
+            this.aNodes[n]._io = false;
 
-		if (this.aNodes[n].pid == node.pid && this.aNodes[n].id != node.id && this.aNodes[n]._hc) {
-
-			this.nodeStatus(false, n, this.aNodes[n]._ls);
-
-			this.aNodes[n]._io = false;
-
-			this.closeAllChildren(this.aNodes[n]);
-
-		}
-
-	}
-
-}
-
-
+            this.closeAllChildren(this.aNodes[n]);
+        }
+    }
+};
 
 // Closes all children of a node
 
-dTree.prototype.closeAllChildren = function(node) {
+dTree.prototype.closeAllChildren = function (node) {
+    for (var n = 0; n < this.aNodes.length; n++) {
+        if (this.aNodes[n].pid == node.id && this.aNodes[n]._hc) {
+            if (this.aNodes[n]._io)
+                this.nodeStatus(false, n, this.aNodes[n]._ls);
 
-	for (var n=0; n<this.aNodes.length; n++) {
+            this.aNodes[n]._io = false;
 
-		if (this.aNodes[n].pid == node.id && this.aNodes[n]._hc) {
-
-			if (this.aNodes[n]._io) this.nodeStatus(false, n, this.aNodes[n]._ls);
-
-			this.aNodes[n]._io = false;
-
-			this.closeAllChildren(this.aNodes[n]);		
-
-		}
-
-	}
-
-}
-
-
+            this.closeAllChildren(this.aNodes[n]);
+        }
+    }
+};
 
 // Change the status of a node(open or closed)
 
-dTree.prototype.nodeStatus = function(status, id, bottom) {
+dTree.prototype.nodeStatus = function (status, id, bottom) {
+    eDiv = document.getElementById("d" + this.obj + id);
 
-	eDiv	= document.getElementById('d' + this.obj + id);
+    eJoin = document.getElementById("j" + this.obj + id);
 
-	eJoin	= document.getElementById('j' + this.obj + id);
+    if (this.config.useIcons) {
+        eIcon = document.getElementById("i" + this.obj + id);
 
-	if (this.config.useIcons) {
+        eIcon.src = status ? this.aNodes[id].iconOpen : this.aNodes[id].icon;
+    }
 
-		eIcon	= document.getElementById('i' + this.obj + id);
+    eJoin.src = this.config.useLines
+        ? status
+            ? bottom
+                ? this.icon.minusBottom
+                : this.icon.minus
+            : bottom
+            ? this.icon.plusBottom
+            : this.icon.plus
+        : status
+        ? this.icon.nlMinus
+        : this.icon.nlPlus;
 
-		eIcon.src = (status) ? this.aNodes[id].iconOpen : this.aNodes[id].icon;
-
-	}
-
-	eJoin.src = (this.config.useLines)?
-
-	((status)?((bottom)?this.icon.minusBottom:this.icon.minus):((bottom)?this.icon.plusBottom:this.icon.plus)):
-
-	((status)?this.icon.nlMinus:this.icon.nlPlus);
-
-	eDiv.style.display = (status) ? 'block': 'none';
-
+    eDiv.style.display = status ? "block" : "none";
 };
-
-
-
-
 
 // [Cookie] Clears a cookie
 
-dTree.prototype.clearCookie = function() {
+dTree.prototype.clearCookie = function () {
+    var now = new Date();
 
-	var now = new Date();
+    var yesterday = new Date(now.getTime() - 1000 * 60 * 60 * 24);
 
-	var yesterday = new Date(now.getTime() - 1000 * 60 * 60 * 24);
+    this.setCookie("co" + this.obj, "cookieValue", yesterday);
 
-	this.setCookie('co'+this.obj, 'cookieValue', yesterday);
-
-	this.setCookie('cs'+this.obj, 'cookieValue', yesterday);
-
+    this.setCookie("cs" + this.obj, "cookieValue", yesterday);
 };
-
-
 
 // [Cookie] Sets value in a cookie
 
-dTree.prototype.setCookie = function(cookieName, cookieValue, expires, path, domain, secure) {
-
-	document.cookie =
-
-		escape(cookieName) + '=' + escape(cookieValue)
-
-		+ (expires ? '; expires=' + expires.toGMTString() : '')
-
-		+ (path ? '; path=' + path : '')
-
-		+ (domain ? '; domain=' + domain : '')
-
-		+ (secure ? '; secure' : '');
-
+dTree.prototype.setCookie = function (
+    cookieName,
+    cookieValue,
+    expires,
+    path,
+    domain,
+    secure
+) {
+    document.cookie =
+        escape(cookieName) +
+        "=" +
+        escape(cookieValue) +
+        (expires ? "; expires=" + expires.toGMTString() : "") +
+        (path ? "; path=" + path : "") +
+        (domain ? "; domain=" + domain : "") +
+        (secure ? "; secure" : "");
 };
-
-
 
 // [Cookie] Gets a value from a cookie
 
-dTree.prototype.getCookie = function(cookieName) {
+dTree.prototype.getCookie = function (cookieName) {
+    var cookieValue = "";
 
-	var cookieValue = '';
+    var posName = document.cookie.indexOf(escape(cookieName) + "=");
 
-	var posName = document.cookie.indexOf(escape(cookieName) + '=');
+    if (posName != -1) {
+        var posValue = posName + (escape(cookieName) + "=").length;
 
-	if (posName != -1) {
+        var endPos = document.cookie.indexOf(";", posValue);
 
-		var posValue = posName + (escape(cookieName) + '=').length;
+        if (endPos != -1)
+            cookieValue = unescape(document.cookie.substring(posValue, endPos));
+        else cookieValue = unescape(document.cookie.substring(posValue));
+    }
 
-		var endPos = document.cookie.indexOf(';', posValue);
-
-		if (endPos != -1) cookieValue = unescape(document.cookie.substring(posValue, endPos));
-
-		else cookieValue = unescape(document.cookie.substring(posValue));
-
-	}
-
-	return (cookieValue);
-
+    return cookieValue;
 };
-
-
 
 // [Cookie] Returns ids of open nodes as a string
 
-dTree.prototype.updateCookie = function() {
+dTree.prototype.updateCookie = function () {
+    var str = "";
 
-	var str = '';
+    for (var n = 0; n < this.aNodes.length; n++) {
+        if (this.aNodes[n]._io && this.aNodes[n].pid != this.root.id) {
+            if (str) str += ".";
 
-	for (var n=0; n<this.aNodes.length; n++) {
+            str += this.aNodes[n].id;
+        }
+    }
 
-		if (this.aNodes[n]._io && this.aNodes[n].pid != this.root.id) {
-
-			if (str) str += '.';
-
-			str += this.aNodes[n].id;
-
-		}
-
-	}
-
-	this.setCookie('co' + this.obj, str);
-
+    this.setCookie("co" + this.obj, str);
 };
-
-
 
 // [Cookie] Checks if a node id is in a cookie
 
-dTree.prototype.isOpen = function(id) {
+dTree.prototype.isOpen = function (id) {
+    var aOpen = this.getCookie("co" + this.obj).split(".");
 
-	var aOpen = this.getCookie('co' + this.obj).split('.');
+    for (var n = 0; n < aOpen.length; n++) if (aOpen[n] == id) return true;
 
-	for (var n=0; n<aOpen.length; n++)
-
-		if (aOpen[n] == id) return true;
-
-	return false;
-
+    return false;
 };
-
-
 
 // If Push and pop is not implemented by the browser
 
 if (!Array.prototype.push) {
+    Array.prototype.push = function array_push() {
+        for (var i = 0; i < arguments.length; i++)
+            this[this.length] = arguments[i];
 
-	Array.prototype.push = function array_push() {
-
-		for(var i=0;i<arguments.length;i++)
-
-			this[this.length]=arguments[i];
-
-		return this.length;
-
-	}
-
-};
+        return this.length;
+    };
+}
 
 if (!Array.prototype.pop) {
+    Array.prototype.pop = function array_pop() {
+        lastElement = this[this.length - 1];
 
-	Array.prototype.pop = function array_pop() {
+        this.length = Math.max(this.length - 1, 0);
 
-		lastElement = this[this.length-1];
-
-		this.length = Math.max(this.length-1,0);
-
-		return lastElement;
-
-	}
-
-};
+        return lastElement;
+    };
+}

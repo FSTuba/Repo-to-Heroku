@@ -11,6 +11,37 @@ function rollDice(dice_num) {
     return result_array;
 }
 
+function ruleOfSixRoll(dice_array) {
+    var extra_dice_num = 0;
+    for (let i = 0; i < dice_array.length; i++) {
+        if (dice_array[i] == 6) {
+            extra_dice_num++;
+            dice_array[i] = 7;
+        }
+    }
+    for (let j = 0; j < extra_dice_num; j++) {
+        var rand_num = getRndInteger(1, 6);
+        dice_array.push(rand_num);
+    }
+    return dice_array;
+}
+
+function secondChanceRoll(dice_array) {
+    console.log(dice_array);
+    var extra_dice_num = 0;
+    for (let i = 0; i < dice_array.length; i++) {
+        if ([1, 2, 3, 4].includes(dice_array[i])) {
+            extra_dice_num++;
+            dice_array[i] = 0;
+        }
+    }
+    for (let j = 0; j < extra_dice_num; j++) {
+        var rand_num = getRndInteger(1, 6);
+        dice_array.push(rand_num);
+    }
+    return dice_array;
+}
+
 function buildDiceBlockHTML(block_id, dice_array) {
     var result_element;
     var left_element;
@@ -74,6 +105,12 @@ function buildDiceBlockHTML(block_id, dice_array) {
                 hit_num++;
                 roll_six_num++;
                 break;
+            case 7: //已經爆骰過的6會變成7
+                img_element.setAttribute("src", "./img/D6-6-yellow.png");
+                dice_element.appendChild(img_element);
+                left_element.appendChild(dice_element);
+                hit_num++;
+                break;
         }
     }
 
@@ -106,12 +143,34 @@ function buildDiceBlockHTML(block_id, dice_array) {
     button_a_element.setAttribute("value", "良機再現");
     button_a_element.setAttribute("id", "rule_of_six_btn_id_" + block_id);
     button_a_element.setAttribute("class", "me-1");
+    button_a_element.addEventListener("click", function () {
+        var new_dice_array = secondChanceRoll(
+            dice_array_record_array[block_id]
+        );
+        new_dice_block = buildDiceBlockHTML(block_id, new_dice_array);
+        document
+            .getElementById("show_dice_result_id")
+            .replaceChild(
+                new_dice_block,
+                document.getElementById("dice_block_id_" + block_id)
+            );
+    });
 
     button_b_element = document.createElement("input");
     button_b_element.setAttribute("type", "button");
     button_b_element.setAttribute("value", "爆骰(" + roll_six_num + ")");
     button_b_element.setAttribute("id", "rule_of_six_btn_id_" + block_id);
     button_b_element.setAttribute("class", "me-1");
+    button_b_element.addEventListener("click", function () {
+        var new_dice_array = ruleOfSixRoll(dice_array_record_array[block_id]);
+        new_dice_block = buildDiceBlockHTML(block_id, new_dice_array);
+        document
+            .getElementById("show_dice_result_id")
+            .replaceChild(
+                new_dice_block,
+                document.getElementById("dice_block_id_" + block_id)
+            );
+    });
 
     right_element = document.createElement("div");
     right_element.setAttribute("class", "col-4 border");
@@ -125,15 +184,23 @@ function buildDiceBlockHTML(block_id, dice_array) {
 }
 
 var block_id = 0;
+const dice_array_record_array = [];
 
-document.getElementById("roll_btn_id").onclick = function () {
-    if (!document.getElementById("input_dice_poll_id").value) {
-        alert("請輸入骰池數量");
-    } else {
-        var dice_poll_num = document.getElementById("input_dice_poll_id").value;
-        block_id += 1;
-        document.getElementById("show_dice_result_id").appendChild(
-            buildDiceBlockHTML(block_id, rollDice(dice_poll_num))
-        );
-    }
-};
+document.getElementById("roll_btn_id").addEventListener(
+    "click",
+    function () {
+        if (!document.getElementById("input_dice_poll_id").value) {
+            alert("請輸入骰池數量");
+        } else {
+            var dice_poll_num =
+                document.getElementById("input_dice_poll_id").value;
+            var dice_poll_array = rollDice(dice_poll_num);
+            dice_array_record_array[block_id] = dice_poll_array;
+            document
+                .getElementById("show_dice_result_id")
+                .prepend(buildDiceBlockHTML(block_id, dice_poll_array));
+            block_id += 1;
+        }
+    },
+    false
+);

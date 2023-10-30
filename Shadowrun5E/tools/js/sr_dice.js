@@ -27,7 +27,6 @@ function ruleOfSixRoll(dice_array) {
 }
 
 function secondChanceRoll(dice_array) {
-    console.log(dice_array);
     var extra_dice_num = 0;
     for (let i = 0; i < dice_array.length; i++) {
         if ([1, 2, 3, 4].includes(dice_array[i])) {
